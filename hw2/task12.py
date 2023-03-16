@@ -3,9 +3,11 @@
 # Он называет сумму этих чисел S и их произведение P.
 # Помогите Кате отгадать задуманные Петей числа.
 
-x = int(input())
-y = int(input())
-for i in range(x):
-    for j in range(y):
-        if x == i + j and y == i * j:
-            print(i, j)
+s = int(input())
+p = int(input())
+x, y = 0, 0
+d = s ** 2 - 4 * p
+if d >= 0:
+    x = round((s + d ** 0.5) // 2)
+    y = round((s - d ** 0.5) // 2)
+    print(x, y)
