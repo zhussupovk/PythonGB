@@ -10,7 +10,7 @@
 # -> 5
 from random import randint
 
-list_nums = [randint(1, 21) for _ in range(int(input()))]
+list_nums = [randint(1, 21) for i in range(int(input()))]
 
 print(list_nums)
 num = int(input())
@@ -21,3 +21,14 @@ for i in list_nums:
         right_num = i
 
 print(right_num)
+
+# 2 вариант
+
+from random import randint
+
+n = int(input())
+list_nums = [randint(1, 50) for i in range(n)]
+print(list_nums)
+b = int(input())
+m = min(list_nums, key=lambda x: abs(x - b))
+print(m)
